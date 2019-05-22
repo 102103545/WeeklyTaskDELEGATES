@@ -31,6 +31,7 @@ namespace FileParserNetStandard {
         /// <param name="delimeter"></param>
         /// <param name="rows"></param>
         public void WriteFile(string filePath, char delimeter, List<List<string>> rows) {
+            File.WriteAllText(filePath, "");
             foreach (List<string> list in rows)
             {
                 string line = "";
@@ -76,7 +77,16 @@ namespace FileParserNetStandard {
         /// <param name="data"></param>
         /// <returns></returns>
         public List<List<string>> ParseCsv(List<string> data) {
-            return new List<List<string>>();  //-- return result here
+
+            List<List<String>> result = new List<List<string>>();
+            foreach (string text in data)
+            {
+
+                result.Add(text.Split(',').ToList());
+            }
+
+            //return result;//-- return result here
+            return new List<List<string>>().Add(data.Where(spl);  //-- return result here
         }
     }
 }

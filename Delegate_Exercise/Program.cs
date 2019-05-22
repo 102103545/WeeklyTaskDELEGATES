@@ -11,7 +11,7 @@ namespace Delegate_Exercise {
     
     internal class Delegate_Exercise {
         public static void Main(string[] args) {
-                        
+        
  
             
         }
