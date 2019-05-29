@@ -16,8 +16,8 @@ namespace Delegate_Exercise {
         /// <param name="writeFile"></param>
         /// <param name="dataHandler"></param>
         public void ProcessCsv(string readFile, string writeFile, Func<List<List<string>>, List<List<string>>> dataHandler) {   }
-        
 
+        //Func<List<List<string>>, List<List<string>>> dataHandler <-- all 1 generic delegate
 
         public delegate void DataHandler(List<List<string>> strings);
         
