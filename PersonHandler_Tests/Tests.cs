@@ -14,7 +14,7 @@ namespace PersonHandler_Tests {
         private string csvPath = "/users/anguyen/Documents/Rider/processed_data.csv"; // change to appropriate path
         private List<List<string>> data;
 
-        private List<Person> people;
+        //private List<Person> people;
 
         [SetUp]
         public void Init() {

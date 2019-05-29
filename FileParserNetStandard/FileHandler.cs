@@ -85,8 +85,8 @@ namespace FileParserNetStandard {
                 result.Add(text.Split(',').ToList());
             }
 
-            //return result;//-- return result here
-            return new List<List<string>>().Add(data.Where(spl);  //-- return result here
+            return result;//-- return result here
+            //return new List<List<string>>().Add(data.Where(var => var=data.All.split(',')));  //-- return result here
         }
     }
 }
