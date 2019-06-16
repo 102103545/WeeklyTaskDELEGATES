@@ -76,7 +76,15 @@ namespace FileParserNetStandard {
         /// <param name="data"></param>
         /// <returns></returns>
         public List<List<string>> ParseCsv(List<string> data) {
-            return new List<List<string>>();  //-- return result here
+            List<List<string>> result = new List<List<string>>();
+            foreach(string s in data)
+            {
+                List<string> splitString = new List<string>();
+                splitString = s.Split(',').ToList();
+                result.Add(splitString);
+            }
+
+            return result;  //-- return result here
         }
     }
 }
