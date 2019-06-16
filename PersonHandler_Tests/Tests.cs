@@ -11,7 +11,7 @@ namespace PersonHandler_Tests {
         private FileHandler _fh;
         private DataParser _dp;
 
-        private string csvPath = "/users/anguyen/Documents/Rider/processed_data.csv"; // change to appropriate path
+        private string csvPath = "//hda/Docs/Uni/diploma/delegates task/WeeklyTaskDELEGATES/Files/processed_data.csv"; // change to appropriate path
         private List<List<string>> data;
 
         private List<Person> people;
@@ -30,6 +30,7 @@ namespace PersonHandler_Tests {
             PersonHandler ph = new PersonHandler(data);
             
             Assert.AreEqual(500, ph.People.Count);
+            
             Assert.AreEqual("Arlinda", ph.People.ElementAt(462).FirstName);
         }
 

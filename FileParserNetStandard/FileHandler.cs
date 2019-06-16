@@ -15,7 +15,7 @@ namespace FileParserNetStandard {
         /// </summary>
         /// <param name="filePath"></param>
         /// <returns></returns>
-        public List<string> ReadFile(string filePath) {
+        public  List<string> ReadFile(string filePath) {
             List<string> lines = new List<string>();
             string[] temp = File.ReadAllLines(filePath);
             foreach(var line in temp)
@@ -30,7 +30,7 @@ namespace FileParserNetStandard {
         /// <param name="filePath"></param>
         /// <param name="delimeter"></param>
         /// <param name="rows"></param>
-        public void WriteFile(string filePath, char delimeter, List<List<string>> rows) {
+        public  void WriteFile(string filePath, char delimeter, List<List<string>> rows) {
             foreach (List<string> list in rows)
             {
                 string line = "";
@@ -75,7 +75,7 @@ namespace FileParserNetStandard {
         /// </summary>
         /// <param name="data"></param>
         /// <returns></returns>
-        public List<List<string>> ParseCsv(List<string> data) {
+        public  List<List<string>> ParseCsv(List<string> data) {
             List<List<string>> result = new List<List<string>>();
             foreach(string s in data)
             {

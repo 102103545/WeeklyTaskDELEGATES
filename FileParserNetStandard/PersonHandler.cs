@@ -9,6 +9,24 @@ namespace FileParserNetStandard {
     ///
    // public class Person { }  // temporary class delet this when Person is referenced from dll
    // 
+
+
+
+
+
+
+        //Must use linq/lambda 
+
+
+
+
+
+
+
+
+
+
+
     public class PersonHandler {
         public List<Person> People;
 
@@ -16,10 +34,14 @@ namespace FileParserNetStandard {
         /// Converts List of list of strings into Person objects for People attribute.
         /// </summary>
         /// <param name="people"></param>
-        public PersonHandler(List<List<string>> people) {
-        
-        }
-
+        public PersonHandler(List<List<string>> people)
+        {
+            //People = people.ForEach(i => {
+            //    People.Add(
+            //        new Person(int.Parse(i[0]), i[1], i[2], new DateTime(long.Parse(i[3])))
+            //        )    
+            //        });
+         }
         /// <summary>
         /// Gets oldest people
         /// </summary>

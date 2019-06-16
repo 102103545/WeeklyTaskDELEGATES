@@ -54,9 +54,17 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Delegate_Exercise\Delegate_Exercise.csproj">
+      <Project>{2346e97c-ffa8-4efa-aa01-1b9d83bdc803}</Project>
+      <Name>Delegate_Exercise</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FileParserNetStandard\FileParserNetStandard.csproj">
       <Project>{3ed47081-9daf-44af-be6e-0d4a4e5873aa}</Project>
       <Name>FileParserNetStandard</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FileParserNetStandard_Tests\FileParserNetStandard_Tests.csproj">
+      <Project>{22008748-afde-4d78-952f-bcb2fa9fc697}</Project>
+      <Name>FileParserNetStandard_Tests</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

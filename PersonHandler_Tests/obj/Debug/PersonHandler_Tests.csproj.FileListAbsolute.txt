@@ -32,3 +32,8 @@
 \\hda\Docs\Uni\diploma\delegates task\WeeklyTaskDELEGATES\PersonHandler_Tests\obj\Debug\PersonHandler_Tests.csproj.CopyComplete
 \\hda\Docs\Uni\diploma\delegates task\WeeklyTaskDELEGATES\PersonHandler_Tests\obj\Debug\PersonHandler_Tests.dll
 \\hda\Docs\Uni\diploma\delegates task\WeeklyTaskDELEGATES\PersonHandler_Tests\obj\Debug\PersonHandler_Tests.pdb
+\\hda\Docs\Uni\diploma\delegates task\WeeklyTaskDELEGATES\PersonHandler_Tests\bin\Debug\Delegate_Exercise.exe
+\\hda\Docs\Uni\diploma\delegates task\WeeklyTaskDELEGATES\PersonHandler_Tests\bin\Debug\FileParserNetStandard_Tests.dll
+\\hda\Docs\Uni\diploma\delegates task\WeeklyTaskDELEGATES\PersonHandler_Tests\bin\Debug\Delegate_Exercise.pdb
+\\hda\Docs\Uni\diploma\delegates task\WeeklyTaskDELEGATES\PersonHandler_Tests\bin\Debug\Delegate_Exercise.exe.config
+\\hda\Docs\Uni\diploma\delegates task\WeeklyTaskDELEGATES\PersonHandler_Tests\bin\Debug\FileParserNetStandard_Tests.pdb
