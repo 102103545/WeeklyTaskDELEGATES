@@ -41,14 +41,16 @@ namespace FileParserNetStandard {
             //        new Person(int.Parse(i[0]), i[1], i[2], new DateTime(long.Parse(i[3])))
             //        )    
             //        });
+            people.RemoveAt(0);
+            People = people.Select(p => new Person(int.Parse(p[0]), p[1], p[2], new DateTime(long.Parse(p[3])))).ToList();
          }
         /// <summary>
         /// Gets oldest people
         /// </summary>
         /// <returns></returns>
         public List<Person> GetOldest() {
-            
-            return new List<Person>(); //-- return result here
+
+            return People.Where(p => p.Dob == People.Select(d => d.Dob).Min()).ToList(); //-- return result here
         }
 
         /// <summary>
@@ -57,12 +59,12 @@ namespace FileParserNetStandard {
         /// <param name="id"></param>
         /// <returns></returns>
         public string GetString(int id) {
-
-            return "result";  //-- return result here
+            Person selectedperson = People.Where(p => p.Id == id).ToList().FirstOrDefault();
+            return selectedperson.FirstName + " " + selectedperson.Surname + " " + selectedperson.Dob.ToString("d/MM/yyyy hh:mm:ss tt/M/yyyy");//-- return result here
         }
 
         public List<Person> GetOrderBySurname() {
-            return new List<Person>();  //-- return result here
+            return People.OrderBy(p=>p.Surname).ToList();  //-- return result here
         }
 
         /// <summary>
@@ -73,7 +75,7 @@ namespace FileParserNetStandard {
         /// <returns></returns>
         public int GetNumSurnameBegins(string searchTerm, bool caseSensitive) {
 
-            return 0;  //-- return result here
+            return People.Where(p=>p.Surname.StartsWith(searchTerm,!caseSensitive,null)).Count();  //-- return result here
         }
         
         /// <summary>
@@ -82,7 +84,10 @@ namespace FileParserNetStandard {
         /// <returns></returns>
         public List<string> GetAmountBornOnEachDate() {
             List<string> result = new List<string>();
-
+            //result = People.OrderBy(p=>p.Dob).Select(p => p.Dob.ToString()+"\t"+People.Where(p2=>p2.Dob==p.Dob).Count().ToString()).ToList();
+            result = People.GroupBy(p=>p.Dob).OrderBy(p=>p.Key).Select(p=>p.Key.ToString("d/MM/yyyy hh:mm:ss tt")+"\t"+ People.Where(p2 => p2.Dob == p.Key).Count().ToString()).ToList();
+            foreach (string s in result)
+            { Console.WriteLine(s); }
             return result;  //-- return result here
         }
     }
